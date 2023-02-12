@@ -1,17 +1,2 @@
 const form = document.getElementById('form')
-const email = document.getElementById('email')
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const emailVal = email.value
-    if (!validateEmail(emailVal)) {
-        form.classList.add('error')
-    } else {
-        form.classList.remove('error')
-        document.body.innerHTML = 'Thank You!'
-    }
-})
-
-function validateEmail(email) {
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    return regex.test(String(email).toLowerCase())
-}
+// form.classList.add('error')
